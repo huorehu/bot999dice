@@ -9,6 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		Strategy strategy = new MyStrategy();
 		Bot bot = new Bot(strategy, USER_NAME, PASSWORD, KEY_API);
+		bot.start();
 	}
 
 }
