@@ -9,20 +9,19 @@ public class Loginer {
     
 	private String cookies;
 	
-	private final String userName = "test@ccount";
-	private final String password = "24zem37kf5";
-	private final String keyAPI = " 44d37bfbbcbb4d0cb1aef54553f1d1f4";
+	private final String userName;
 	
 	private final String loginRow;
 	
-	public Loginer() {
+	public Loginer(final String userName, final String password, final String keyAPI) {
 		StringBuilder loginRow = new StringBuilder("a=Login&Key=");
-		loginRow.append(this.keyAPI)
+		loginRow.append(keyAPI)
 				.append("&Username=")
-				.append(this.userName)
+				.append(userName)
 				.append("&Password=")
-				.append(this.password);
+				.append(password);
 		this.loginRow = loginRow.toString();
+		this.userName = userName;
 	}
 	
 	public void authorize(Requester requester) {
@@ -32,6 +31,10 @@ public class Loginer {
 	
 	public String getCookies() {
 		return cookies;
+	}
+	
+	public String getUserName() {
+		return userName;
 	}
 
 }
