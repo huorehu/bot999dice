@@ -13,10 +13,12 @@ public class Bot {
 		this.loginer = new Loginer(userName, password, keyAPI);
 		this.strategy = strategy;
 		requester = new Requester(URL, METHOD);
+		loginer.authorize(requester);
 	}
 	
 	public void start() {
-		
+		String data = null;
+		requester.request(data);
 	}
 
 }
