@@ -8,6 +8,9 @@ public class Bot {
 	private Loginer loginer;
 	private Strategy strategy;
 	private Requester requester;
+	private SmartBetCalculator betCalculator;
+	
+	private boolean isRun = true;
 	
 	public Bot(Strategy strategy, final String userName, final String password, final String keyAPI) {
 		this.loginer = new Loginer(userName, password, keyAPI);
@@ -17,8 +20,12 @@ public class Bot {
 	}
 	
 	public void start() {
-		String data = null;
-		requester.request(data);
+		
+		while(isRun) {
+			String data = null;
+			long nextBet = betCalculator.getNextBet(strategy);
+			requester.request(data);
+		}
 	}
 
 }
