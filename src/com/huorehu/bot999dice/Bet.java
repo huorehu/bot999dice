@@ -15,5 +15,17 @@ public class Bet {
     private final String fifth = "&ClientSeed=";
     private int clientSeed;
     private final String sixth = "&Currency=btc";
+    
+    public Bet() {
+    	
+    }
+    
+    public void setBet(final int bet) {
+    	this.bet = bet;
+    }
+    
+    public String getBetRequest() {
+    	return betRequest.toString();
+    }
 
 }
