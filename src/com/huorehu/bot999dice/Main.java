@@ -1,5 +1,8 @@
 package com.huorehu.bot999dice;
 
+import com.huorehu.bot999dice.strategy.MyStrategy;
+import com.huorehu.bot999dice.strategy.Strategy;
+
 public class Main {
 	
 	private static final String USER_NAME = "test@ccount";

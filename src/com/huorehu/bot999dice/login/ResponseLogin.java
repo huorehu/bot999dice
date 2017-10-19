@@ -1,4 +1,4 @@
-package com.huorehu.bot999dice;
+package com.huorehu.bot999dice.login;
 
 import com.google.gson.annotations.SerializedName;
 

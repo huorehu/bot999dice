@@ -1,6 +1,7 @@
-package com.huorehu.bot999dice;
+package com.huorehu.bot999dice.login;
 
 import com.google.gson.Gson;
+import com.huorehu.bot999dice.Requester;
 
 public class Loginer {
 	
@@ -22,7 +23,7 @@ public class Loginer {
 		this.userName = userName;
 	}
 	
-	public void authorize(final Requester requester, final String loginRow) {
+	private void authorize(final Requester requester, final String loginRow) {
 		responseLogin = json.fromJson(requester.request(loginRow), ResponseLogin.class);
         cookies = responseLogin.getSessionCookie();
 	}

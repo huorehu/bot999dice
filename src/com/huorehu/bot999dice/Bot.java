@@ -1,5 +1,8 @@
 package com.huorehu.bot999dice;
 
+import com.huorehu.bot999dice.login.Loginer;
+import com.huorehu.bot999dice.strategy.Strategy;
+
 public class Bot {
 	
 	private static final String URL = "https://www.999dice.com/api/web.aspx";
