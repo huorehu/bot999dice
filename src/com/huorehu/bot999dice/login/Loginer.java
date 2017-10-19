@@ -1,7 +1,7 @@
 package com.huorehu.bot999dice.login;
 
 import com.google.gson.Gson;
-import com.huorehu.bot999dice.Requester;
+import com.huorehu.bot999dice.controller.Requester;
 
 public class Loginer {
 	

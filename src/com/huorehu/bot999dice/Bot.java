@@ -1,5 +1,6 @@
 package com.huorehu.bot999dice;
 
+import com.huorehu.bot999dice.controller.Requester;
 import com.huorehu.bot999dice.login.Loginer;
 import com.huorehu.bot999dice.strategy.Strategy;
 
@@ -24,9 +25,10 @@ public class Bot {
 	public void start() {
 		
 		while(isRun) {
-			String data = null;
-			long nextBet = betCalculator.getNextBet(strategy);
-			requester.request(data);
+//			String data = null;
+//			long nextBet = betCalculator.getNextBet(strategy);
+//			requester.request(data);
+			
 		}
 	}
 

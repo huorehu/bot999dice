@@ -1,4 +1,4 @@
-package com.huorehu.bot999dice;
+package com.huorehu.bot999dice.controller;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
