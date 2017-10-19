@@ -13,10 +13,9 @@ public class Bot {
 	private boolean isRun = true;
 	
 	public Bot(Strategy strategy, final String userName, final String password, final String keyAPI) {
-		this.loginer = new Loginer(userName, password, keyAPI);
 		this.strategy = strategy;
 		requester = new Requester(URL, METHOD);
-		loginer.authorize(requester);
+		this.loginer = new Loginer(userName, password, keyAPI, requester);
 	}
 	
 	public void start() {

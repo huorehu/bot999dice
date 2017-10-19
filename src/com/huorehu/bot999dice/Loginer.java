@@ -11,20 +11,18 @@ public class Loginer {
 	
 	private final String userName;
 	
-	private final String loginRow;
-	
-	public Loginer(final String userName, final String password, final String keyAPI) {
+	public Loginer(final String userName, final String password, final String keyAPI, final Requester requester) {
 		StringBuilder loginRow = new StringBuilder("a=Login&Key=");
 		loginRow.append(keyAPI)
 				.append("&Username=")
 				.append(userName)
 				.append("&Password=")
 				.append(password);
-		this.loginRow = loginRow.toString();
+		authorize(requester, loginRow.toString());
 		this.userName = userName;
 	}
 	
-	public void authorize(Requester requester) {
+	public void authorize(final Requester requester, final String loginRow) {
 		responseLogin = json.fromJson(requester.request(loginRow), ResponseLogin.class);
         cookies = responseLogin.getSessionCookie();
 	}
